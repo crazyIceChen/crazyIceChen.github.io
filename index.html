@@ -72,7 +72,7 @@
 						<li>Tags</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -105,7 +105,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+						<a href="/tags/解决方案/" style="font-size: 10px;">解决方案</a>
 					</div>
 				</section>
 				
@@ -169,10 +169,10 @@
 
       <div class="body-wrap">
   
-    <article id="post-我的第一篇博客" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-hexo报错解决方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/05/15/我的第一篇博客/" class="article-date">
+      <a href="/2016/05/15/hexo报错解决方法/" class="article-date">
   	<time datetime="2016-05-15T03:29:54.000Z" itemprop="datePublished">2016-05-15</time>
 </a>
     </div>
@@ -186,7 +186,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/15/我的第一篇博客/">我的第一篇博客</a>
+      <a class="article-title" href="/2016/05/15/hexo报错解决方法/">hexo报错解决</a>
     </h1>
   
 
@@ -195,31 +195,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##搭建了hexo 开始了博客之旅<br><a href="http://example.com/" target="_blank" rel="external">http://example.com/</a></p>
-<table>
-<thead>
-<tr>
-<th>项目</th>
-<th>价格</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Computer</td>
-<td>$1600</td>
-</tr>
-<tr>
-<td>Phone</td>
-<td>$12</td>
-</tr>
-<tr>
-<td>Pipe</td>
-<td>$1</td>
-</tr>
-</tbody>
-</table>
-<pre><code>#include &lt;iostream&gt;
-usingnamesapce;
+        <p>运行hexo报错</p>
+<pre><code>{ [Error: Cannot find module &apos;./build/Release/    DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; }
+{ [Error: Cannot find module &apos;./build/default/    DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; }
+{ [Error: Cannot find module &apos;./build/Debug/    DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; }
+</code></pre><p>一般的解决方法是 </p>
+<pre><code>npm install hexo --no-optional
+</code></pre><p>但是我试过没有作用还是出错<br>然后尝试了重装hexo-cli 发现成功</p>
+<pre><code>sudo npm uninstall hexo-cli -g
+sudo npm install hexo-cli -g
 </code></pre>
       
     </div>
@@ -228,7 +212,7 @@ usingnamesapce;
       
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解决方案/">解决方案</a></li></ul>
 	</div>
 
       
