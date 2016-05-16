@@ -105,7 +105,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/c-c/" style="font-size: 10px;">c/c++</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/swift/" style="font-size: 10px;">swift</a> <a href="/tags/内核/" style="font-size: 10px;">内核</a> <a href="/tags/解决方案/" style="font-size: 20px;">解决方案</a>
+						<a href="/tags/c-c/" style="font-size: 10px;">c/c++</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/swift/" style="font-size: 10px;">swift</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/内核/" style="font-size: 10px;">内核</a> <a href="/tags/解决方案/" style="font-size: 20px;">解决方案</a>
 					</div>
 				</section>
 				
@@ -168,6 +168,72 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-ubuntu系统突然开不了机了，一直卡在logo界面" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/16/ubuntu系统突然开不了机了，一直卡在logo界面/" class="article-date">
+  	<time datetime="2016-05-16T09:53:45.000Z" itemprop="datePublished">2016-05-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/16/ubuntu系统突然开不了机了，一直卡在logo界面/">ubuntu系统突然开不了机了，一直卡在logo界面</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>解决办法：</p>
+<p>按s，可进入命令行界面，挂载 </p>
+<pre><code>sudo mount -o remount,rw / 
+</code></pre><p>查看日志 </p>
+<pre><code>cat /var/log/syslog
+</code></pre><p>发现是文件系统挂载有问题，猜想应该是突然关机，断电引起的文件系统损坏，一直自检不过</p>
+<p>于是重启，按s 进入命令行界面，（当然也可卸载 umount）</p>
+<p>用fsck 修复 具体命令 </p>
+<pre><code>sudo fsck -s /dev/sda1
+</code></pre><p>重启完成。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解决方案/">解决方案</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-swift-中委托-代理模式-转载" class="article article-type-post" itemscope itemprop="blogPost">
   
