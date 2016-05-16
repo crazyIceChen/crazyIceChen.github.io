@@ -4,17 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>溜呀溜溜球</title>
+  <title>swift 中委托/代理模式(转载) | 溜呀溜溜球</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="溜呀溜溜球">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Swift 中的委托/代理模式（以下简称”代理模式”）与object-c的代理模式基本一致。
+代理模式的基本思想就是将我（类或者结构体等）需要来完成的工作交给（委托给）另一个有我所规定的做这项工作能力的人（符合要求类型的对象等）来处理。
+代理模式的实现需借助于我们上一篇文章所讲的协议。我们定义一个协议来封装那些指定的方法（做这项工作的能力），使实现这些协议的类等拥有这些方法，我们就可以将工作委托给">
+<meta property="og:type" content="article">
+<meta property="og:title" content="swift 中委托/代理模式(转载)">
+<meta property="og:url" content="http://yoursite.com/2016/05/16/swift-中委托-代理模式-转载/index.html">
 <meta property="og:site_name" content="溜呀溜溜球">
-<meta property="og:description">
+<meta property="og:description" content="Swift 中的委托/代理模式（以下简称”代理模式”）与object-c的代理模式基本一致。
+代理模式的基本思想就是将我（类或者结构体等）需要来完成的工作交给（委托给）另一个有我所规定的做这项工作能力的人（符合要求类型的对象等）来处理。
+代理模式的实现需借助于我们上一篇文章所讲的协议。我们定义一个协议来封装那些指定的方法（做这项工作的能力），使实现这些协议的类等拥有这些方法，我们就可以将工作委托给">
+<meta property="og:updated_time" content="2016-05-16T09:52:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="溜呀溜溜球">
-<meta name="twitter:description">
+<meta name="twitter:title" content="swift 中委托/代理模式(转载)">
+<meta name="twitter:description" content="Swift 中的委托/代理模式（以下简称”代理模式”）与object-c的代理模式基本一致。
+代理模式的基本思想就是将我（类或者结构体等）需要来完成的工作交给（委托给）另一个有我所规定的做这项工作能力的人（符合要求类型的对象等）来处理。
+代理模式的实现需借助于我们上一篇文章所讲的协议。我们定义一个协议来封装那些指定的方法（做这项工作的能力），使实现这些协议的类等拥有这些方法，我们就可以将工作委托给">
   
     <link rel="alternative" href="/atom.xml" title="溜呀溜溜球" type="application/atom+xml">
   
@@ -167,9 +174,7 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
-  
-    <article id="post-swift-中委托-代理模式-转载" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-swift-中委托-代理模式-转载" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/05/16/swift-中委托-代理模式-转载/" class="article-date">
@@ -185,12 +190,23 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/16/swift-中委托-代理模式-转载/">swift 中委托/代理模式(转载)</a>
+    <h1 class="article-title" itemprop="name">
+      swift 中委托/代理模式(转载)
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -257,101 +273,40 @@ myHouse.rentDelegate?.Renting()
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/05/16/container-of、typeof、offsetof-详细分析/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">container_of、typeof、offsetof 详细分析</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
-
-
-
-
-
-
-
-  
-    <article id="post-container-of、typeof、offsetof-详细分析" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/16/container-of、typeof、offsetof-详细分析/" class="article-date">
-  	<time datetime="2016-05-16T09:16:19.000Z" itemprop="datePublished">2016-05-16</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/16/container-of、typeof、offsetof-详细分析/">container_of、typeof、offsetof 详细分析</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在linux内核代码的include/linux/kernel.h文件中有如下代码：</p>
-<pre><code>#define container_of(ptr, type, member) ({
-    const typeof( ((type *)0)-&gt;member ) *__mptr = (ptr);
-    (type *)( (char *)__mptr - offsetof(type,member) );})
-</code></pre><p>此段代码并不是返回某结构中某成员的入口地址，而是返回包含某成员的结构的入口地址。</p>
-<p>1、const typeof( ((type <em>)0)-&gt;member ) </em>__mptr = (ptr);</p>
-<p>sizeof()是返回变量类型的的大小，typeof()作用是返回变量的类型。</p>
-<p>((type <em>)0)   在此处的0你可以不必理会，它可以是1，也可以是7，此句话相当于把0强制转化为指向type类型的指针，自然typeof( ((type </em>)0)-&gt;member )就是返回type结构中member成员的类型，<strong>mptr是一个指向与member的类型相同的指针，并把ptr赋值给</strong>mptr。</p>
-<p>2、(type <em>)( (char </em>)__mptr - offsetof(type,member) );</p>
-<p>   ①、offsetof(TYPE,MEMBER)宏是在include/linux/stddef.h文件中定义的，如下：</p>
-<pre><code>#define offsetof(TYPE, MEMBER) ((size_t) &amp;((TYPE *)0)-&gt;MEMBER)
-</code></pre><p>该宏用于求结构体中一个成员在该结构体中的偏移量。</p>
-<p>在上面这段宏定义的代码中也有一段“(TYPE *)0)”，在此处必须是0，不可以是其他的整型数。原因：把0作为地址的一个基值，你可以这样理解，把0替换成p，那么p就是指向TYPE结构的指针，只不过p所指向的结构体，被存储在0位置上，这样取成员变量MEMBER的地址，实际就是成员在该结构体中的偏移量。</p>
-<p>   ②、__mptr在上一行代码被赋值为ptr，而ptr是一个实实在在的内存地址，这样减去member在type中的偏移量，就得到了包含‘ptr所指的成员’的结构体的入口地址。</p>
-<p>举例：在linux内核代码的drivers/base/platform.c中有一段代码，如下：(为了理解，做了一个简单的修改：</p>
-<p>把原struct device <em> dev改为struct device </em> memdev）</p>
-<pre><code>static int platform_match(struct device * memdev,     struct device_driver * drv)
-{
-struct platform_device *pdev = container_of(memdev,struct platform_device, dev);
-...........
-}
-</code></pre><p>struct platform_device是linux中定义的一个结构体，此结构体有个成员变量为 struct device dev;</p>
-<p>container_of(memdev, struct platform_device, dev);函数就是把 *memdev 所在的类型为<br>struct platform_device的结构体变量的入口地址返回。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c-c/">c/c++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/内核/">内核</a></li></ul>
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
@@ -360,133 +315,6 @@ struct platform_device *pdev = container_of(memdev,struct platform_device, dev);
 
 
 
-
-  
-    <article id="post-mac-dock-自定义隐藏后显示延迟" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/16/mac-dock-自定义隐藏后显示延迟/" class="article-date">
-  	<time datetime="2016-05-16T09:13:03.000Z" itemprop="datePublished">2016-05-16</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/16/mac-dock-自定义隐藏后显示延迟/">mac dock 自定义隐藏后显示延迟</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在命令行输入</p>
-<pre><code>defaults write com.apple.dock autohide-time-modifier     -float 0.3;killall Dock
-</code></pre><p>0.3即延迟0.3秒可自定义为任意值</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解决方案/">解决方案</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hexo报错解决方法" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/15/hexo报错解决方法/" class="article-date">
-  	<time datetime="2016-05-15T03:29:54.000Z" itemprop="datePublished">2016-05-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/15/hexo报错解决方法/">hexo报错解决</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>运行hexo报错</p>
-<pre><code>{ [Error: Cannot find module &apos;./build/Release/    DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; }
-{ [Error: Cannot find module &apos;./build/default/    DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; }
-{ [Error: Cannot find module &apos;./build/Debug/    DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; }
-</code></pre><p>一般的解决方法是 </p>
-<pre><code>npm install hexo --no-optional
-</code></pre><p>但是我试过没有作用还是出错<br>然后尝试了重装hexo-cli 发现成功</p>
-<pre><code>sudo npm uninstall hexo-cli -g
-sudo npm install hexo-cli -g
-</code></pre>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解决方案/">解决方案</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -510,8 +338,8 @@ sudo npm install hexo-cli -g
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
