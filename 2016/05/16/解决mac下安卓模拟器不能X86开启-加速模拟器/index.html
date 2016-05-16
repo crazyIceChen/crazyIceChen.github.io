@@ -4,24 +4,27 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>hexo报错解决 | 溜呀溜溜球</title>
+  <title>解决mac下安卓模拟器不能X86开启(加速模拟器) | 溜呀溜溜球</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="运行hexo报错
-{ [Error: Cannot find module &amp;apos;./build/Release/    DTraceProviderBindings&amp;apos;] code: &amp;apos;MODULE_NOT_FOUND&amp;apos; }
-{ [Error: Cannot find module &amp;apos;./build/default/    DTraceProvider">
+  <meta name="description" content="在Android SDK Manager———-&amp;gt;Extras———–&amp;gt;Intel x86 Emulator Accelerator(HAXM installer)
+终端输入
+sudo nvram boot-args=&amp;quot;kext-dev-mode=1&amp;quot;
+重启即可">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo报错解决">
-<meta property="og:url" content="http://yoursite.com/2016/05/15/hexo报错解决方法/index.html">
+<meta property="og:title" content="解决mac下安卓模拟器不能X86开启(加速模拟器)">
+<meta property="og:url" content="http://yoursite.com/2016/05/16/解决mac下安卓模拟器不能X86开启-加速模拟器/index.html">
 <meta property="og:site_name" content="溜呀溜溜球">
-<meta property="og:description" content="运行hexo报错
-{ [Error: Cannot find module &amp;apos;./build/Release/    DTraceProviderBindings&amp;apos;] code: &amp;apos;MODULE_NOT_FOUND&amp;apos; }
-{ [Error: Cannot find module &amp;apos;./build/default/    DTraceProvider">
-<meta property="og:updated_time" content="2016-05-15T06:15:00.000Z">
+<meta property="og:description" content="在Android SDK Manager———-&amp;gt;Extras———–&amp;gt;Intel x86 Emulator Accelerator(HAXM installer)
+终端输入
+sudo nvram boot-args=&amp;quot;kext-dev-mode=1&amp;quot;
+重启即可">
+<meta property="og:updated_time" content="2016-05-16T09:58:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo报错解决">
-<meta name="twitter:description" content="运行hexo报错
-{ [Error: Cannot find module &amp;apos;./build/Release/    DTraceProviderBindings&amp;apos;] code: &amp;apos;MODULE_NOT_FOUND&amp;apos; }
-{ [Error: Cannot find module &amp;apos;./build/default/    DTraceProvider">
+<meta name="twitter:title" content="解决mac下安卓模拟器不能X86开启(加速模拟器)">
+<meta name="twitter:description" content="在Android SDK Manager———-&amp;gt;Extras———–&amp;gt;Intel x86 Emulator Accelerator(HAXM installer)
+终端输入
+sudo nvram boot-args=&amp;quot;kext-dev-mode=1&amp;quot;
+重启即可">
   
     <link rel="alternative" href="/atom.xml" title="溜呀溜溜球" type="application/atom+xml">
   
@@ -174,11 +177,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-hexo报错解决方法" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-解决mac下安卓模拟器不能X86开启-加速模拟器" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/05/15/hexo报错解决方法/" class="article-date">
-  	<time datetime="2016-05-15T03:29:54.000Z" itemprop="datePublished">2016-05-15</time>
+      <a href="/2016/05/16/解决mac下安卓模拟器不能X86开启-加速模拟器/" class="article-date">
+  	<time datetime="2016-05-16T09:57:13.000Z" itemprop="datePublished">2016-05-16</time>
 </a>
     </div>
   
@@ -191,7 +194,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      hexo报错解决
+      解决mac下安卓模拟器不能X86开启(加速模拟器)
     </h1>
   
 
@@ -200,7 +203,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解决方案/">解决方案</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解决方案/">解决方案</a></li></ul>
 	</div>
 
         
@@ -211,16 +214,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>运行hexo报错</p>
-<pre><code>{ [Error: Cannot find module &apos;./build/Release/    DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; }
-{ [Error: Cannot find module &apos;./build/default/    DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; }
-{ [Error: Cannot find module &apos;./build/Debug/    DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; }
-</code></pre><p>一般的解决方法是 </p>
-<pre><code>npm install hexo --no-optional
-</code></pre><p>但是我试过没有作用还是出错<br>然后尝试了重装hexo-cli 发现成功</p>
-<pre><code>sudo npm uninstall hexo-cli -g
-sudo npm install hexo-cli -g
-</code></pre>
+        <p>在Android SDK Manager———-&gt;Extras———–&gt;Intel x86 Emulator Accelerator(HAXM installer)</p>
+<p>终端输入</p>
+<pre><code>sudo nvram boot-args=&quot;kext-dev-mode=1&quot;
+</code></pre><p>重启即可</p>
+
       
     </div>
     
@@ -229,15 +227,11 @@ sudo npm install hexo-cli -g
     
 <nav id="article-nav">
   
-    <a href="/2016/05/16/mac-dock-自定义隐藏后显示延迟/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          mac dock 自定义隐藏后显示延迟
-        
-      </div>
-    </a>
   
+    <a href="/2016/05/16/ubuntu系统突然开不了机了，一直卡在logo界面/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ubuntu系统突然开不了机了，一直卡在logo界面</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
