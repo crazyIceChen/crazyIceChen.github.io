@@ -304,63 +304,6 @@
 
 
   
-    <article id="post-反转单向链表" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/15/反转单向链表/" class="article-date">
-  	<time datetime="2016-07-15T03:29:54.000Z" itemprop="datePublished">2016-07-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/15/反转单向链表/">反转单向链表</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>思路：把curr-next的节点，插入到链表头，直到curr-next == NULL<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">LinkList reverse(LinkList L)</span><br><span class="line">&#123;</span><br><span class="line">	if(L == NULL )</span><br><span class="line">		return NULL;</span><br><span class="line">	LinkList curr,pnext;</span><br><span class="line">	curr = L-&gt;next;</span><br><span class="line">	while(curr-&gt;next != NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		pnext = curr-&gt;next;</span><br><span class="line">		curr-&gt;next = pnext-&gt;next;</span><br><span class="line">		pnext-&gt;next = curr;</span><br><span class="line">		L-&gt;next = pnext;</span><br><span class="line">	&#125;</span><br><span class="line">	return L;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
     <article id="post-linux常用命令" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -441,6 +384,63 @@
 
 
   
+    <article id="post-反转单向链表" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/15/反转单向链表/" class="article-date">
+  	<time datetime="2016-07-15T03:29:54.000Z" itemprop="datePublished">2016-07-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/15/反转单向链表/">反转单向链表</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>思路：把curr-next的节点，插入到链表头，直到curr-next == NULL<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">LinkList reverse(LinkList L)</span><br><span class="line">&#123;</span><br><span class="line">	if(L == NULL )</span><br><span class="line">		return NULL;</span><br><span class="line">	LinkList curr,pnext;</span><br><span class="line">	curr = L-&gt;next;</span><br><span class="line">	while(curr-&gt;next != NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		pnext = curr-&gt;next;</span><br><span class="line">		curr-&gt;next = pnext-&gt;next;</span><br><span class="line">		pnext-&gt;next = curr;</span><br><span class="line">		L-&gt;next = pnext;</span><br><span class="line">	&#125;</span><br><span class="line">	return L;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-gdbserver的使用" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -473,12 +473,10 @@
 <p>3.挂在虚拟机文件夹：mount -t nfs -o nolock,tcp 172.29.6.89:/home/ice /mnt/hda;cd mnt/hda/..</p>
 <p>4.运行gdbserver：gdbserver 172.29.6.89:2345 ./Play</p>
 <p>5.虚拟机运行gdb：</p>
-</blockquote>
 <pre><code>/home/ice/../toolchain/gcc4/asdk-4.9.3-a53-EL-3.10-    u0.9.33-a32nt-150818/bin/arm-linux-gdb ./Play
 gdb&gt;target remot 172.29.6.56
 gdb&gt;handle SIGUSR1 nostop noprint
-</code></pre><blockquote>
-<p>6.使用调试程序:<br>设置断点：b main<br>运行程序：c</p>
+</code></pre><p>6.使用调试程序:<br>设置断点：<code>b main</code><br>运行程序：c</p>
 </blockquote>
 
       
