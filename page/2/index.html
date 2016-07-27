@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: c/c++ | 溜呀溜溜球</title>
+  <title>溜呀溜溜球</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="溜呀溜溜球">
-<meta property="og:url" content="http://yoursite.com/tags/c-c/index.html">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="溜呀溜溜球">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
@@ -169,52 +169,76 @@
 
       <div class="body-wrap">
   
+    <article id="post-hexo报错解决方法" class="article article-type-post" itemscope itemprop="blogPost">
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/05/16/container-of、typeof、offsetof-详细分析/" class="archive-article-date">
-  	<time datetime="2016-05-16T09:16:19.000Z" itemprop="datePublished">May 16</time>
+    <div class="article-meta">
+      <a href="/2016/05/15/hexo报错解决方法/" class="article-date">
+  	<time datetime="2016-05-15T03:29:54.000Z" itemprop="datePublished">2016-05-15</time>
 </a>
-        </div>
-    	 
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/16/container-of、typeof、offsetof-详细分析/">container_of、typeof、offsetof 详细分析</a>
+      <a class="article-title" href="/2016/05/15/hexo报错解决方法/">hexo报错解决</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>运行hexo报错</p>
+<pre><code>{ [Error: Cannot find module &apos;./build/Release/    DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; }
+{ [Error: Cannot find module &apos;./build/default/    DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; }
+{ [Error: Cannot find module &apos;./build/Debug/    DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; }
+</code></pre><p>一般的解决方法是 </p>
+<pre><code>npm install hexo --no-optional
+</code></pre><p>但是我试过没有作用还是出错<br>然后尝试了重装hexo-cli 发现成功</p>
+<pre><code>sudo npm uninstall hexo-cli -g
+sudo npm install hexo-cli -g
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c-c/">c/c++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/内核/">内核</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解决方案/">解决方案</a></li></ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      
+      <div class="clearfix"></div>
+    </div>
     
+  </div>
+  
+</article>
 
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -238,10 +262,10 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: false,
+		isHome: true,
 		isPost: false,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}

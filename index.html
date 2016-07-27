@@ -105,7 +105,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/c-c/" style="font-size: 10px;">c/c++</a> <a href="/tags/mac/" style="font-size: 15px;">mac</a> <a href="/tags/swift/" style="font-size: 10px;">swift</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/内核/" style="font-size: 10px;">内核</a> <a href="/tags/解决方案/" style="font-size: 20px;">解决方案</a>
+						<a href="/tags/Gerrit/" style="font-size: 10px;">Gerrit</a> <a href="/tags/algorithm/" style="font-size: 15px;">algorithm</a> <a href="/tags/c-c/" style="font-size: 10px;">c/c++</a> <a href="/tags/gdb/" style="font-size: 10px;">gdb</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/mac/" style="font-size: 15px;">mac</a> <a href="/tags/swift/" style="font-size: 10px;">swift</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/内核/" style="font-size: 10px;">内核</a> <a href="/tags/解决方案/" style="font-size: 20px;">解决方案</a>
 					</div>
 				</section>
 				
@@ -168,6 +168,347 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-strcpy函数的实现" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/27/strcpy函数的实现/" class="article-date">
+  	<time datetime="2016-07-27T03:29:54.000Z" itemprop="datePublished">2016-07-27</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/27/strcpy函数的实现/">strcpy函数的实现</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#strcpy函数的实现<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">char* strcpy(char* strD,const char* strSrc)</span><br><span class="line">&#123;</span><br><span class="line">	assert((strD != NULL)&amp;&amp;(strSrc != NULL));</span><br><span class="line">	char* addr = strD;</span><br><span class="line">	while((*strD++ = *strSrc++)!=&apos;\0&apos;)</span><br><span class="line">	&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	return addr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>注意检查指针可用性，const修饰，返回char* 是为了链式表达如：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strlen(strcpy(str1,str2));</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Gerrit初始化代码并同步" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/27/Gerrit初始化代码并同步/" class="article-date">
+  	<time datetime="2016-07-27T03:29:54.000Z" itemprop="datePublished">2016-07-27</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/27/Gerrit初始化代码并同步/">Gerrit初始化代码并同步</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#Gerrit初始化代码并同步<br>建立好Gerrit账户以后，就可以同步代码了。我们使用Repo和Git来进行项目和代码的版本管理。xxxx的代码由数个子项目构成，每个子项目隶属于一个GIT项目。在这些子项目上面是通过repo来管理的，类似于Android源代码的管理方式。</p>
+<blockquote>
+<ul>
+<li>下载drepo命令文件至某个PATH的目录<code>chmod a+x ~/bin/drepo</code></li>
+</ul>
+<ul>
+<li>初始化工程<code>repo init -u ssh://&lt;username&gt;@codeserver.xxx.com:29418/BrowserManifest -b &lt;branch_name&gt;</code></li>
+</ul>
+<p>最后的branch_name代表一个repo branch，是我们的开发版本，比如shell_master，xxx_master等，请和对应的项目负责人确认具体的 repo branch</p>
+<ul>
+<li>同步代码<code>drepo sync</code></li>
+</ul>
+<ul>
+<li>创建本地分支（这一步是必须的，否则每次同步都会冲掉本地的提交）<code>drepo start &lt;branch name&gt;</code> (brance name 任意，推荐和上面-b参数指定的branch name一致)<br><code>repo list</code> 可以查看repo环境下有多少个project</li>
+</ul>
+<ul>
+<li>如出现错误：<code>error: at least one project must be specified</code><br>运行<br><code>drepo start &lt;branch name&gt; (brance name 任意，推荐和上面-b参数指定的branch name一致) --all</code></li>
+</ul>
+</blockquote>
+<p>然后其他操作跟git差不多<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add</span><br><span class="line">git commit</span><br></pre></td></tr></table></figure></p>
+<p>但是最后上传的时候不同<br><code>repo upload</code></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gerrit/">Gerrit</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-反转单向链表" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/15/反转单向链表/" class="article-date">
+  	<time datetime="2016-07-15T03:29:54.000Z" itemprop="datePublished">2016-07-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/15/反转单向链表/">反转单向链表</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>思路：把curr-next的节点，插入到链表头，直到curr-next == NULL<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">LinkList reverse(LinkList L)</span><br><span class="line">&#123;</span><br><span class="line">	if(L == NULL )</span><br><span class="line">		return NULL;</span><br><span class="line">	LinkList curr,pnext;</span><br><span class="line">	curr = L-&gt;next;</span><br><span class="line">	while(curr-&gt;next != NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		pnext = curr-&gt;next;</span><br><span class="line">		curr-&gt;next = pnext-&gt;next;</span><br><span class="line">		pnext-&gt;next = curr;</span><br><span class="line">		L-&gt;next = pnext;</span><br><span class="line">	&#125;</span><br><span class="line">	return L;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-linux常用命令" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/15/linux常用命令/" class="article-date">
+  	<time datetime="2016-07-15T03:29:54.000Z" itemprop="datePublished">2016-07-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/15/linux常用命令/">Linux 常用的命令(未完结)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#Linux 常用的命令(未完结)<br>[TOC]</p>
+<p>##du<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -h -s filename</span><br></pre></td></tr></table></figure></p>
+<p>查看使用空间类似的可以用来查看下载进度和copy进度</p>
+<p>##cp<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cp -rf 拷贝目录</span><br><span class="line">``` </span><br><span class="line">##rm</span><br><span class="line">``` </span><br><span class="line">rm -rf 删除目录</span><br></pre></td></tr></table></figure></p>
+<p>##rsync<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rsync -avz ice@172.29.6.8:/home/ice/.... 从服务器下载东西下来</span><br></pre></td></tr></table></figure></p>
+<p>##tar<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar zxvf 解压</span><br></pre></td></tr></table></figure></p>
+<p>##nohup<br>可以在登出ssh后服务器仍能继续执行命令 如： nohup wget</p>
+<p>##at<br>可以在特定的实践执行相同的命令,例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">at 10:38 PM Fri</span><br><span class="line">at&gt; cowsay &apos;hello&apos;</span><br><span class="line">at&gt; CTRL+D</span><br></pre></td></tr></table></figure></p>
+<p>##vim 编辑后获得权限保存<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">:w !sudo tee %</span><br><span class="line">map &lt;leader&gt;sudo :w !sudo tee%</span><br></pre></td></tr></table></figure></p>
+<p>##awk<br>$1..$n表示第几列<br>$0 表示整行<br>NR 表示行号<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk &apos;&#123;print $1,$4&#125;&apos; file.txt</span><br></pre></td></tr></table></figure></p>
+<p>###格式化输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">awk &apos;&#123;printf &quot;%-8s%-8s\n&quot;,$1,$2&#125;&apos; file.txt</span><br><span class="line">跟c printf 一样</span><br></pre></td></tr></table></figure></p>
+<p>###过滤:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk &apos;$3==0&amp;&amp;$6==&quot;LISTEN&quot;&apos; file.txt</span><br></pre></td></tr></table></figure></p>
+<p>###指定分隔符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">awk &apos;BEGIN&#123;FS=&quot;:&quot;&#125;&#123;print $1,$3&#125;&apos; file.txt</span><br><span class="line">也可以：</span><br><span class="line">awk -F: &apos;&#123;print $1,$3&#125;&apos; file.txt</span><br><span class="line">-F &apos;[;:]&apos; :可指定多个分隔符</span><br></pre></td></tr></table></figure></p>
+<p>###awk未完待续</p>
+<h2 id="read"><a href="#read" class="headerlink" title="read"></a>read</h2><p>读入字符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">read -p &quot;Please input your name: &quot; -t 30 varname</span><br><span class="line">``` </span><br><span class="line">##history</span><br><span class="line">可以列出最近用的指令，可配合!实用，如：</span><br></pre></td></tr></table></figure></p>
+<p>!?ls?   可模糊匹配<br>!!      执行上一条命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">##cut</span><br><span class="line">截取信息</span><br></pre></td></tr></table></figure></p>
+<p>echo ${PATH} | cut d ‘:’ -f 3,5<br>export | cut -c 12-<br>export | cut -c 12-30<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">##grep</span><br><span class="line">分析信息</span><br></pre></td></tr></table></figure></p>
+<p>-a ：將 binary 檔案以 text 檔案的方式搜尋資料<br>-c ：計算找到 ‘搜尋字串’ 的次數<br>-i ：忽略大小寫的不同，所以大小寫視為相同<br>-n ：順便輸出行號<br>-v ：反向選擇，亦即顯示出沒有 ‘搜尋字串’ 內容的那一行！<br>–color=auto ：可以將找到的關鍵字部分加上顏色的顯示喔！<br>last | grep ‘root’<br>last | grep ‘root’ | cut -d ‘’ -f 1<br>grep –color=auto ‘MANPATH’ /etc/man_db.conf<br>```</p>
+<p>##crontab<br>周期性执行任务<br><code>crontab -e</code><br>分 时 日 月 周(0-7) cmd</p>
+<blockquote>
+<p><em>-u  ：只有 root 才能進行這個任務，亦即幫其他使用者建立/移除 crontab 工作排程；
+</em>-e  ：編輯 crontab 的工作內容<br><em>-l  ：查閱 crontab 的工作內容
+</em>-r  ：移除所有的 crontab 的工作內容，若僅要移除一項，請用 -e 去編輯。</p>
+</blockquote>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-gdbserver的使用" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/15/gdbserver的使用/" class="article-date">
+  	<time datetime="2016-07-15T03:29:54.000Z" itemprop="datePublished">2016-07-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/15/gdbserver的使用/">gdbserver的使用</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>1.配置nfs 在虚拟机/etc/exports中配置</p>
+<p>2.设置板子的ip等</p>
+<p>3.挂在虚拟机文件夹：mount -t nfs -o nolock,tcp 172.29.6.89:/home/ice /mnt/hda;cd mnt/hda/..</p>
+<p>4.运行gdbserver：gdbserver 172.29.6.89:2345 ./Play</p>
+<p>5.虚拟机运行gdb：</p>
+</blockquote>
+<pre><code>/home/ice/../toolchain/gcc4/asdk-4.9.3-a53-EL-3.10-    u0.9.33-a32nt-150818/bin/arm-linux-gdb ./Play
+gdb&gt;target remot 172.29.6.56
+gdb&gt;handle SIGUSR1 nostop noprint
+</code></pre><blockquote>
+<p>6.使用调试程序:<br>设置断点：b main<br>运行程序：c</p>
+</blockquote>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gdb/">gdb</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-解决mac下安卓模拟器不能X86开启-加速模拟器" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -547,71 +888,10 @@ struct platform_device *pdev = container_of(memdev,struct platform_device, dev);
 
 
   
-    <article id="post-hexo报错解决方法" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2016/05/15/hexo报错解决方法/" class="article-date">
-  	<time datetime="2016-05-15T03:29:54.000Z" itemprop="datePublished">2016-05-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/15/hexo报错解决方法/">hexo报错解决</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>运行hexo报错</p>
-<pre><code>{ [Error: Cannot find module &apos;./build/Release/    DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; }
-{ [Error: Cannot find module &apos;./build/default/    DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; }
-{ [Error: Cannot find module &apos;./build/Debug/    DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; }
-</code></pre><p>一般的解决方法是 </p>
-<pre><code>npm install hexo --no-optional
-</code></pre><p>但是我试过没有作用还是出错<br>然后尝试了重装hexo-cli 发现成功</p>
-<pre><code>sudo npm uninstall hexo-cli -g
-sudo npm install hexo-cli -g
-</code></pre>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解决方案/">解决方案</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">
