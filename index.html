@@ -195,6 +195,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+          
         <p>#Gerrit初始化代码并同步<br>建立好Gerrit账户以后，就可以同步代码了。我们使用Repo和Git来进行项目和代码的版本管理。xxxx的代码由数个子项目构成，每个子项目隶属于一个GIT项目。在这些子项目上面是通过repo来管理的，类似于Android源代码的管理方式。</p>
 <blockquote>
 <ul>
@@ -272,6 +273,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+          
         <p>#strcpy函数的实现<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span>* <span class="title">strcpy</span><span class="params">(<span class="keyword">char</span>* strD,<span class="keyword">const</span> <span class="keyword">char</span>* strSrc)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	assert((strD != NULL)&amp;&amp;(strSrc != NULL));</span><br><span class="line">	<span class="keyword">char</span>* addr = strD;</span><br><span class="line">	<span class="keyword">while</span>((*strD++ = *strSrc++)!=<span class="string">'\0'</span>)</span><br><span class="line">	&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	return addr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><strong>注意检查指针可用性，const修饰，返回char* 是为了链式表达如：</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">strlen</span>(<span class="built_in">strcpy</span>(str1,str2));</span><br></pre></td></tr></table></figure>
@@ -284,6 +286,74 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-gdbserver的使用" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/15/gdbserver的使用/" class="article-date">
+  	<time datetime="2016-07-15T03:29:54.000Z" itemprop="datePublished">2016-07-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/15/gdbserver的使用/">gdbserver的使用</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <blockquote>
+<p>1.配置nfs 在虚拟机/etc/exports中配置</p>
+<p>2.设置板子的ip等</p>
+<p>3.挂在虚拟机文件夹：mount -t nfs -o nolock,tcp 172.29.6.89:/home/ice /mnt/hda;cd mnt/hda/..</p>
+<p>4.运行gdbserver：gdbserver 172.29.6.89:2345 ./Play</p>
+<p>5.虚拟机运行gdb：</p>
+<pre><code>/home/ice/../toolchain/gcc4/asdk-4.9.3-a53-EL-3.10-    u0.9.33-a32nt-150818/bin/arm-linux-gdb ./Play
+gdb&gt;target remot 172.29.6.56
+gdb&gt;handle SIGUSR1 nostop noprint
+</code></pre><p>6.使用调试程序:<br>设置断点：<code>b main</code><br>运行程序：c</p>
+</blockquote>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gdb/">gdb</a></li></ul>
 	</div>
 
       
@@ -331,6 +401,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+          
         <h1 id="Linux-常用的命令-未完结"><a href="#Linux-常用的命令-未完结" class="headerlink" title="Linux 常用的命令(未完结)"></a>Linux 常用的命令(未完结)</h1><p>[TOC]</p>
 <h2 id="du"><a href="#du" class="headerlink" title="du"></a>du</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -h -s filename</span><br></pre></td></tr></table></figure>
 <p>查看使用空间类似的可以用来查看下载进度和copy进度</p>
@@ -410,6 +481,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+          
         <p>思路：把curr-next的节点，插入到链表头，直到curr-next == NULL<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">LinkList reverse(LinkList L)</span><br><span class="line">&#123;</span><br><span class="line">	if(L == NULL )</span><br><span class="line">		return NULL;</span><br><span class="line">	LinkList curr,pnext;</span><br><span class="line">	curr = L-&gt;next;</span><br><span class="line">	while(curr-&gt;next != NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		pnext = curr-&gt;next;</span><br><span class="line">		curr-&gt;next = pnext-&gt;next;</span><br><span class="line">		pnext-&gt;next = curr;</span><br><span class="line">		L-&gt;next = pnext;</span><br><span class="line">	&#125;</span><br><span class="line">	return L;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
@@ -420,73 +492,6 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-gdbserver的使用" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/15/gdbserver的使用/" class="article-date">
-  	<time datetime="2016-07-15T03:29:54.000Z" itemprop="datePublished">2016-07-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/15/gdbserver的使用/">gdbserver的使用</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>1.配置nfs 在虚拟机/etc/exports中配置</p>
-<p>2.设置板子的ip等</p>
-<p>3.挂在虚拟机文件夹：mount -t nfs -o nolock,tcp 172.29.6.89:/home/ice /mnt/hda;cd mnt/hda/..</p>
-<p>4.运行gdbserver：gdbserver 172.29.6.89:2345 ./Play</p>
-<p>5.虚拟机运行gdb：</p>
-<pre><code>/home/ice/../toolchain/gcc4/asdk-4.9.3-a53-EL-3.10-    u0.9.33-a32nt-150818/bin/arm-linux-gdb ./Play
-gdb&gt;target remot 172.29.6.56
-gdb&gt;handle SIGUSR1 nostop noprint
-</code></pre><p>6.使用调试程序:<br>设置断点：<code>b main</code><br>运行程序：c</p>
-</blockquote>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gdb/">gdb</a></li></ul>
 	</div>
 
       
@@ -534,6 +539,7 @@ gdb&gt;handle SIGUSR1 nostop noprint
     
     <div class="article-entry" itemprop="articleBody">
       
+          
         <p>在Android SDK Manager———-&gt;Extras———–&gt;Intel x86 Emulator Accelerator(HAXM installer)</p>
 <p>终端输入</p>
 <pre><code>sudo nvram boot-args=&quot;kext-dev-mode=1&quot;
@@ -594,6 +600,7 @@ gdb&gt;handle SIGUSR1 nostop noprint
     
     <div class="article-entry" itemprop="articleBody">
       
+          
         <p>解决办法：</p>
 <p>按s，可进入命令行界面，挂载 </p>
 <pre><code>sudo mount -o remount,rw / 
@@ -660,6 +667,7 @@ gdb&gt;handle SIGUSR1 nostop noprint
     
     <div class="article-entry" itemprop="articleBody">
       
+          
         <p>Swift 中的委托/代理模式（以下简称”代理模式”）与object-c的代理模式基本一致。</p>
 <p>代理模式的基本思想就是将我（类或者结构体等）需要来完成的工作交给（委托给）另一个有我所规定的做这项工作能力的人（符合要求类型的对象等）来处理。</p>
 <p>代理模式的实现需借助于我们上一篇文章所讲的协议。我们定义一个协议来封装那些指定的方法（做这项工作的能力），使实现这些协议的类等拥有这些方法，我们就可以将工作委托给他来处理。</p>
@@ -774,6 +782,7 @@ myHouse.rentDelegate?.Renting()
     
     <div class="article-entry" itemprop="articleBody">
       
+          
         <p>在linux内核代码的include/linux/kernel.h文件中有如下代码：</p>
 <pre><code>#define container_of(ptr, type, member) ({
     const typeof( ((type *)0)-&gt;member ) *__mptr = (ptr);
@@ -853,6 +862,7 @@ struct platform_device *pdev = container_of(memdev,struct platform_device, dev);
     
     <div class="article-entry" itemprop="articleBody">
       
+          
         <p>在命令行输入</p>
 <pre><code>defaults write com.apple.dock autohide-time-modifier     -float 0.3;killall Dock
 </code></pre><p>0.3即延迟0.3秒可自定义为任意值</p>

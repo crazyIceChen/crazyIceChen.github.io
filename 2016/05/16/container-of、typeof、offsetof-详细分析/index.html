@@ -214,6 +214,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+          
         <p>在linux内核代码的include/linux/kernel.h文件中有如下代码：</p>
 <pre><code>#define container_of(ptr, type, member) ({
     const typeof( ((type *)0)-&gt;member ) *__mptr = (ptr);

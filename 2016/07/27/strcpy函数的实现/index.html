@@ -205,6 +205,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+          
         <p>#strcpy函数的实现<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span>* <span class="title">strcpy</span><span class="params">(<span class="keyword">char</span>* strD,<span class="keyword">const</span> <span class="keyword">char</span>* strSrc)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	assert((strD != NULL)&amp;&amp;(strSrc != NULL));</span><br><span class="line">	<span class="keyword">char</span>* addr = strD;</span><br><span class="line">	<span class="keyword">while</span>((*strD++ = *strSrc++)!=<span class="string">'\0'</span>)</span><br><span class="line">	&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	return addr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><strong>注意检查指针可用性，const修饰，返回char* 是为了链式表达如：</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">strlen</span>(<span class="built_in">strcpy</span>(str1,str2));</span><br></pre></td></tr></table></figure>
@@ -227,8 +228,8 @@
     </a>
   
   
-    <a href="/2016/07/15/linux常用命令/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Linux 常用的命令(未完结)</div>
+    <a href="/2016/07/15/gdbserver的使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">gdbserver的使用</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
