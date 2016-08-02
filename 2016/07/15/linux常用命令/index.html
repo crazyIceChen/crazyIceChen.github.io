@@ -24,7 +24,7 @@ cp12345cp -rf 拷贝目录``` ## rm``` rm -rf 删除目录
 rsync1rsync -avz ice@172.29.6.8:/home/ice/.... 从服务器下载东西下来
 tar1tar zxvf 解压
 nohup可以在登出ssh">
-<meta property="og:updated_time" content="2016-08-02T04:36:56.000Z">
+<meta property="og:updated_time" content="2016-08-02T05:37:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 常用的命令(未完结)">
 <meta name="twitter:description" content="Linux 常用的命令(未完结)[TOC]
@@ -244,7 +244,7 @@ nohup可以在登出ssh">
 <h3 id="指定分隔符"><a href="#指定分隔符" class="headerlink" title="指定分隔符"></a>指定分隔符</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">awk &apos;BEGIN&#123;FS=&quot;:&quot;&#125;&#123;print $1,$3&#125;&apos; file.txt</span><br><span class="line">也可以：</span><br><span class="line">awk -F: &apos;&#123;print $1,$3&#125;&apos; file.txt</span><br><span class="line">-F &apos;[;:]&apos; :可指定多个分隔符</span><br></pre></td></tr></table></figure>
 <h3 id="awk未完待续"><a href="#awk未完待续" class="headerlink" title="awk未完待续"></a>awk未完待续</h3><h2 id="read"><a href="#read" class="headerlink" title="read"></a>read</h2><p>读入字符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">read -p &quot;Please input your name: &quot; -t 30 varname</span><br><span class="line">``` </span><br><span class="line">## history</span><br><span class="line">可以列出最近用的指令，可配合!实用，如：</span><br></pre></td></tr></table></figure></p>
 <p>!?ls?   可模糊匹配<br>!!      执行上一条命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## cut</span><br><span class="line">截取信息</span><br></pre></td></tr></table></figure></p>
-<p>echo ${PATH} | cut d ‘:’ -f 3,5<br>export | cut -c 12-<br>export | cut -c 12-30<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## grep</span><br><span class="line">分析信息</span><br></pre></td></tr></table></figure></p>
+<p>echo ${PATH} | cut d ‘:’ -f 3,5<br>export | cut -c 12-<br>export | cut -c 12-30<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## grep</span><br><span class="line">分析信息</span><br></pre></td></tr></table></figure></p>
 <p>-a ：將 binary 檔案以 text 檔案的方式搜尋資料<br>-c ：計算找到 ‘搜尋字串’ 的次數<br>-i ：忽略大小寫的不同，所以大小寫視為相同<br>-n ：順便輸出行號<br>-v ：反向選擇，亦即顯示出沒有 ‘搜尋字串’ 內容的那一行！<br>–color=auto ：可以將找到的關鍵字部分加上顏色的顯示喔！<br>last | grep ‘root’<br>last | grep ‘root’ | cut -d ‘’ -f 1<br>grep –color=auto ‘MANPATH’ /etc/man_db.conf<br>```</p>
 <h2 id="crontab"><a href="#crontab" class="headerlink" title="crontab"></a>crontab</h2><p>周期性执行任务<br><code>crontab -e</code><br>分 时 日 月 周(0-7) cmd</p>
 <blockquote>
@@ -261,18 +261,18 @@ nohup可以在登出ssh">
     
 <nav id="article-nav">
   
-    <a href="/2016/07/15/反转单向链表/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/07/27/Gerrit初始化代码并同步/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          反转单向链表
+          Gerrit初始化代码并同步
         
       </div>
     </a>
   
   
-    <a href="/2016/05/16/解决mac下安卓模拟器不能X86开启-加速模拟器/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">解决mac下安卓模拟器不能X86开启(加速模拟器)</div>
+    <a href="/2016/07/15/gdbserver的使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">gdbserver的使用</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
