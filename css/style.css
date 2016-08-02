@@ -1192,7 +1192,7 @@ a {
 #article-nav #article-nav-older {
   float: right;
 }
-.toc {
+#toc .toc {
   float: right;
   margin-left: 40px;
   padding: 10px 20px;
@@ -1202,12 +1202,12 @@ a {
   -webkit-box-shadow: 0 0 3px #bbb;
   box-shadow: 0 0 3px #bbb;
 }
-#toc .toc-article {
+.toc-article {
   background: #eee;
   margin: 0 0 0 0.5em;
   padding: 1em;
 }
-#toc .toc-article strong {
+.toc-article strong {
   padding: 0.3em 0;
 }
 #toc {
