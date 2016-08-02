@@ -1192,12 +1192,22 @@ a {
 #article-nav #article-nav-older {
   float: right;
 }
-.toc-article {
+.toc {
+  float: right;
+  margin-left: 40px;
+  padding: 10px 20px;
+  background: #f1f1f1;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 3px #bbb;
+  box-shadow: 0 0 3px #bbb;
+}
+#toc .toc-article {
   background: #eee;
   margin: 0 0 0 0.5em;
   padding: 1em;
 }
-.toc-article strong {
+#toc .toc-article strong {
   padding: 0.3em 0;
 }
 #toc {
